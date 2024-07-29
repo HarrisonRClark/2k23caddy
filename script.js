@@ -19,13 +19,13 @@ $(document).ready(function() {
         let rollout = 0;
         switch (club) {
             case 'driver':
-                rollout = subtotalYardage * 0.2; // 20% rollout for driver
+                rollout = subtotalYardage * 0.15; // 15% rollout for driver
                 break;
             case 'wood':
-                rollout = subtotalYardage * 0.08; // 15% rollout for wood
+                rollout = subtotalYardage * 0.10; // 10% rollout for wood
                 break;
             case 'iron':
-                rollout = subtotalYardage * 0.05; // 10% rollout for iron
+                rollout = subtotalYardage * 0.05; // 5% rollout for iron
                 break;
             case 'wedge':
                 rollout = subtotalYardage * 0; // 5% rollout for wedge
@@ -44,7 +44,7 @@ $(document).ready(function() {
                 break;
         }
 
-        let totalDistance = subtotalYardage - rollout;
+        let totalDistance = subtotalYardage + rollout;
 
         $('#calculatedYardage').text(totalDistance.toFixed(2));
     }
