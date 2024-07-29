@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yardage Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Yardage Calculator</h1>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form>
+                <div class="form-group">
+                    <label for="distanceToFlag">Distance to Flag (Yards)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-flag"></i></span>
+                        </div>
+                        <input type="number" class="form-control" id="distanceToFlag" placeholder="Enter distance">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="elevation">Elevation (Feet)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-mountain"></i></span>
+                        </div>
+                        <input type="number" class="form-control" id="elevation" placeholder="Enter elevation">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="wind">Wind (Mph)</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-wind"></i></span>
+                            </div>
+                            <input type="number" class="form-control" id="wind" placeholder="Enter wind speed">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Wind Direction</label>
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="windDirection">
+                            <label class="custom-control-label" for="windDirection">Helping</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="liePercentage">Lie Percentage (%)</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-percentage"></i></span>
+                        </div>
+                        <input type="number" class="form-control" id="liePercentage" placeholder="Enter lie percentage">
+                    </div>
+                </div>
+                <h3 class="text-center">Subtotal Yardage: <span id="subtotalYardage">0</span> yards</h3>
+                <div class="form-group">
+                    <label for="club">Club</label>
+                    <select class="form-control" id="club">
+                        <option value="driver">Driver</option>
+                        <option value="wood">Wood</option>
+                        <option value="iron">Iron</option>
+                        <option value="wedge">Wedge</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="greenCondition">Green Condition</label>
+                    <select class="form-control" id="greenCondition">
+                        <option value="firm">Firm</option>
+                        <option value="medium">Medium</option>
+                        <option value="soft">Soft</option>
+                    </select>
+                </div>
+            </form>
+            <h3 class="text-center">Calculated Yardage: <span id="calculatedYardage">0</span> yards</h3>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- Custom JS -->
+<script src="script.js"></script>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
