@@ -4,12 +4,12 @@ $(document).ready(function() {
         let elevation = parseFloat($('#elevation').val()) || 0;
         let wind = parseFloat($('#wind').val()) || 0;
         let liePercentage = parseFloat($('#liePercentage').val()) || 100;
-        let windDirection = $('#windDirection').is(':checked');
+        let windDirection = $('#windDirection').val();
         let club = $('#club').val();
         let greenCondition = $('#greenCondition').val();
 
         // Adjust wind based on direction
-        wind = windDirection ? wind : -wind;
+        wind = windDirection === 'helping' ? -wind : wind;
 
         // Calculate subtotal yardage
         let subtotalYardage = (((distanceToFlag) + (elevation / 3)) + wind) * (100 / liePercentage);
