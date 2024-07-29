@@ -44,7 +44,7 @@ $(document).ready(function() {
                 break;
         }
 
-        let totalDistance = subtotalYardage + rollout;
+        let totalDistance = subtotalYardage - rollout;
 
         $('#calculatedYardage').text(totalDistance.toFixed(2));
     }
